@@ -11,9 +11,8 @@ const Root = () => (
 
             return (
                 <div>
-                    {console.log((data))}
                     {
-                        data.tracks.map((item) => console.log(item))
+                        data.tracks.map((item) => <div>{item.title}</div>)
                     }
                 </div>
             )

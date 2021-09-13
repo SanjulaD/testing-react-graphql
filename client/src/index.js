@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Root from "./Root";
+import Auth from "./components/Auth";
 import * as serviceWorker from "./serviceWorker";
 
 import { ApolloProvider } from 'react-apollo'
@@ -12,7 +12,7 @@ const client = new ApolloClient({
 
 ReactDOM.render(
     <ApolloProvider client={client}>
-        <Root />
+        <Auth />
     </ApolloProvider>,
     document.getElementById("root")
 );
