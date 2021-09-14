@@ -9,6 +9,6 @@ export default withRoot(() => {
   const [newUser, setNewUser] = useState(true)
 
   return (
-    newUser ? <Register setNewUser={setNewUser} /> : <Login />
+    newUser ? <Register setNewUser={setNewUser} /> : <Login setNewUser={setNewUser} />
   );
 });

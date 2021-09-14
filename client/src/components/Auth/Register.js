@@ -17,6 +17,7 @@ import DialogTitle from "@material-ui/core/DialogTitle";
 import Slide from "@material-ui/core/Slide";
 import Gavel from "@material-ui/icons/Gavel";
 import VerifiedUserTwoTone from "@material-ui/icons/VerifiedUserTwoTone";
+import Error from "../Shared/Error";
 
 const Register = ({ classes, setNewUser }) => {
 
@@ -87,6 +88,10 @@ const Register = ({ classes, setNewUser }) => {
                 >
                   Previous user?
                 </Button>
+
+                {
+                  error && <Error error={error} />
+                }
               </form>
             )
           }}
