@@ -9,6 +9,17 @@ import ApolloClient, { gql } from 'apollo-boost'
 
 const client = new ApolloClient({
     uri: 'http://localhost:8000/graphql/',
+    fetchOptions: {
+        credential: "include"
+    },
+    request: operation => {
+        const token = localStorage.getItem('ReactGraphQlAuthToken') || ""
+        operation.setContext({
+            headers: {
+                Authorization: `JWT ${token}`
+            }
+        })
+    },
     clientState: {
         defaults: {
             isLoggedIn: !!localStorage.getItem('ReactGraphQlAuthToken')
