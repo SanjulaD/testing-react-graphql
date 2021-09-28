@@ -1,1 +1,1 @@
-# testing-react-graphql
+# React GraphQL 
